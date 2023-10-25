@@ -2,21 +2,23 @@ import Logo from "@/assets/logo.svg"
 import Image from "next/image"
 import Link from "next/link"
 
+const NavLink = ({ children, to }) => <li className="hover:text-red_imperial  transition-all"><Link href={to}>{children}</Link></li>
+
 export function Header() {
     return (
-        <nav className="w-full h-28 flex items-center justify-between pl-24 pr-24">
+        <nav className="w-full h-28 flex items-center justify-between pl-32 pr-32">
             <section className="pb-3">
                 <Link href="/">
                     <Image width={200} src={Logo} />
                 </Link>
             </section>
 
-            <section className="text-white_light text-xl flex">
+            <section className="text-white_light text-[22px] flex">
                 <ul className="flex gap-10 items-center">
-                    <li><Link href="/">Comunidade</Link></li>
-                    <li><Link href="/">CodeSolvers</Link></li>
-                    <li><Link href="#projetos">Projetos</Link></li>
-                    <li><Link href="#sobre-nos">Sobre Nós</Link></li>
+                    <NavLink to="/">Comunidade</NavLink>
+                    <NavLink to="/">CodeSolvers</NavLink>
+                    <NavLink to="#projetos">Projetos</NavLink>
+                    <NavLink to="#sobre-nos">Sobre Nós</NavLink>
                 </ul>
             </section>
         </nav>
