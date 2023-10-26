@@ -8,3 +8,14 @@
 * {
   font-family: "Gotham", sans-serif;
 }
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 100px;
+  background-color: #FF0037;
+}
+::-webkit-scrollbar-track{
+  background-color: #0E0C0F;
+}

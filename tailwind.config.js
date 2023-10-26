@@ -11,7 +11,8 @@ module.exports = {
       colors: {
         "red_imperial": "#FF0037",
         "white_light": "#FDFFFE",
-        "night": "#0E0C0F"
+        "night": "#0E0C0F",
+        "eerie_black": "#19181A",
       }
     },
   },
