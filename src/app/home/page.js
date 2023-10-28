@@ -1,19 +1,18 @@
 // Componentes
 import { Header } from "@/components/header";
 import { Container } from "@/components/container";
+import { ProjectCard } from "@/components/projectCard";
+import { ArrowToDown, Line, RedSpan, Title } from "@/components/layout";
 
 // Images
 import Image from "next/image";
 import Simbolo from "@/assets/simbolo.svg"
-import ArrowDown from "@/assets/arrow-down.svg"
 import ArrowRight from "@/assets/arrow-right.svg"
-import { ProjectCard } from "@/components/projectCard";
+import CharIlustration from "@/assets/characters-illustration.svg"
+import { AdminCard } from "@/components/adminCard";
 
 
-const RedSpan = ({ children, className }) => <span className={`text-red_imperial font-bold ${className}`}>{children}</span>
-const ArrowToDown = () => <Image className="text-red_imperial w-7" src={ArrowDown} alt="arrow-down" />
-const Title = ({ children }) => <h2 className="text-5xl text-center text-white_light font-bold">{children}</h2>
-const Line = ({ horizontal, vertical }) => <div className={`${vertical ? "w-2 h-14" : ""} ${horizontal ? "w-[100px] h-2" : ""} bg-red_imperial rounded`}></div>
+
 
 export default function Home() {
     return (
@@ -64,6 +63,53 @@ export default function Home() {
                     <div className="absolute w-full h-[1px] bg-red_imperial"></div>
                 </div>
             </Container>
+
+            <Container className="flex flex-col">
+                <div className="flex items-center flex-col gap-4 mt-20">
+                    <Title>Sobre Nós</Title>
+                    <Line horizontal />
+                </div>
+
+                <section className="flex items-center px-20 text-white_light">
+                    <Image src={CharIlustration} alt="Illustration" />
+                    <p className="text-3xl">
+                        Lorem <RedSpan>ipsum</RedSpan> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem <RedSpan>ipsum</RedSpan> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem <RedSpan>ipsum</RedSpan> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem <RedSpan>ipsum</RedSpan> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </section>
+            </Container>
+
+            <Container className="flex flex-col">
+                <div className="flex items-center flex-col gap-4 my-20">
+                    <Title>Administradores</Title>
+                    <Line horizontal />
+                </div>
+
+                <section className="flex flex-wrap gap-24 justify-center px-20">
+                    <AdminCard
+                        name="João Carlos"
+                        skill="Desenvolvedor Web"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        image="https://i.pinimg.com/564x/73/92/36/739236f2a40f2e98c8ea3bc6be86a56a.jpg"
+                    />
+
+                    <AdminCard
+                        name="Pedro Mota"
+                        skill="Desenvolvedor Web"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        image="https://i.pinimg.com/736x/e2/2f/87/e22f87ee6a5af3918a9c38eed99773b0.jpg"
+                    />
+
+                    <AdminCard
+                        name="Iran"
+                        skill="Desenvolvedor Web"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        image="https://i.pinimg.com/564x/a5/33/2b/a5332b64260d4b4c6cb9aab2e45a13d4.jpg"
+                    />
+                </section>
+
+
+            </Container>
+
         </main>
     )
 }
