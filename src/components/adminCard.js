@@ -11,7 +11,7 @@ const MidiaBtn = ({ children, to }) => (
     </Link>
 )
 
-export function AdminCard({ name, skill, description, image }) {
+export function AdminCard({ name, skill, description, image, instagram, github, linkedin }) {
 
     return (
         <div className="flex items-center gap-7">
@@ -27,15 +27,15 @@ export function AdminCard({ name, skill, description, image }) {
                 </p>
 
                 <div className="flex items-center gap-3">
-                    <MidiaBtn to="https://google.com">
+                    <MidiaBtn to={`${instagram}`}>
                         <FaInstagram size={40} />
                     </MidiaBtn>
 
-                    <MidiaBtn to="https://google.com">
+                    <MidiaBtn to={`${github}`}>
                         <FaGithub size={40} />
                     </MidiaBtn>
 
-                    <MidiaBtn to="https://google.com">
+                    <MidiaBtn to={`${linkedin}`}>
                         <FaLinkedin size={40} />
                     </MidiaBtn>
                 </div>

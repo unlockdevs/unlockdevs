@@ -1,7 +1,9 @@
-// Componentes
+// Components
 import { Header } from "@/components/header";
 import { Container } from "@/components/container";
 import { ProjectCard } from "@/components/projectCard";
+import { AdminCard } from "@/components/adminCard";
+import { SectionTitle } from "@/components/sectionTitle";
 import { ArrowToDown, Line, RedSpan, Title } from "@/components/layout";
 
 // Images
@@ -9,14 +11,16 @@ import Image from "next/image";
 import Simbolo from "@/assets/simbolo.svg"
 import ArrowRight from "@/assets/arrow-right.svg"
 import CharIlustration from "@/assets/characters-illustration.svg"
-import { AdminCard } from "@/components/adminCard";
 
-
+// Icons
+import { FaInstagram, FaWhatsapp } from "react-icons/fa6";
+import { HiOutlineMail } from "react-icons/hi"
+import { Footer } from "@/components/footer";
 
 
 export default function Home() {
     return (
-        <main className="w-full min-h-screen pb-8 bg-night">
+        <main className="w-full min-h-screen bg-night">
             <Header />
 
             <Container className="gap-20 mt-12 text-white_light">
@@ -38,12 +42,11 @@ export default function Home() {
             </Container>
 
             <Container className="flex-col">
-                <div className="flex items-center flex-col gap-4 mb-14">
-                    <Title>Projetos em Destaque</Title>
-                    <Line horizontal />
-                </div>
+                <SectionTitle id="projetos">
+                    <Title>Projetos em destaque</Title>
+                </SectionTitle>
 
-                <section id="projetos" className="flex flex-wrap justify-center p-4 w-full max-w-[90rem] gap-6">
+                <section className="flex flex-wrap justify-center p-4 w-full max-w-[90rem] gap-6">
                     <ProjectCard />
                     <ProjectCard />
                     <ProjectCard />
@@ -65,29 +68,29 @@ export default function Home() {
             </Container>
 
             <Container className="flex flex-col">
-                <div className="flex items-center flex-col gap-4 mt-20">
+                <SectionTitle id="sobre-nos">
                     <Title>Sobre Nós</Title>
-                    <Line horizontal />
-                </div>
+                </SectionTitle>
 
                 <section className="flex items-center px-20 text-white_light">
                     <Image src={CharIlustration} alt="Illustration" />
-                    <p className="text-3xl">
+
+                    <p className="text-3xl max-w-[50rem]">
                         Lorem <RedSpan>ipsum</RedSpan> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem <RedSpan>ipsum</RedSpan> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem <RedSpan>ipsum</RedSpan> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem <RedSpan>ipsum</RedSpan> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
+
                 </section>
             </Container>
 
             <Container className="flex flex-col">
-                <div className="flex items-center flex-col gap-4 my-20">
+                <SectionTitle>
                     <Title>Administradores</Title>
-                    <Line horizontal />
-                </div>
+                </SectionTitle>
 
-                <section className="flex flex-wrap gap-24 justify-center px-20">
+                <section className="flex flex-wrap max-w-[105rem] gap-24 justify-center px-20">
                     <AdminCard
                         name="João Carlos"
-                        skill="Desenvolvedor Web"
+                        skill="Desenvolvedor Web | Designer"
                         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                         image="https://i.pinimg.com/564x/73/92/36/739236f2a40f2e98c8ea3bc6be86a56a.jpg"
                     />
@@ -106,10 +109,48 @@ export default function Home() {
                         image="https://i.pinimg.com/564x/a5/33/2b/a5332b64260d4b4c6cb9aab2e45a13d4.jpg"
                     />
                 </section>
-
-
             </Container>
 
+            <Container className="flex flex-col mb-[10rem]">
+                <SectionTitle>
+                    <Title>Fale Conosco</Title>
+                </SectionTitle>
+
+
+                <section className="flex flex-wrap justify-center max-w-[70rem] gap-14 text-white_light text-5xl font-bold">
+                    <div className="flex items-center gap-4 cursor-pointer hover:text-pink-700 transition-colors">
+                        <FaInstagram size={100} />
+                        <div>
+                            <h2>@unlockdevs</h2>
+                            <p className="text-red_imperial text-xl font-normal">
+                                clique para acessar nosso intagram
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-4 cursor-pointer hover:text-orange-500 transition-colors">
+                        <HiOutlineMail size={100} />
+                        <div>
+                            <h2>Nosso e-mail</h2>
+                            <p className="text-red_imperial text-xl font-normal">
+                                clique para copiar nosso e-mail
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="flex items-center gap-4 cursor-pointer hover:text-green-500 transition-colors">
+                        <FaWhatsapp size={100} />
+                        <div>
+                            <h2>Fale conosco</h2>
+                            <p className="text-red_imperial text-xl font-normal">
+                                clique para falar pelo WhatsApp
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </Container>
+
+            <Footer />
         </main>
     )
 }
