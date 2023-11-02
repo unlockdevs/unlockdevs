@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Simbolo from "@/assets/simbolo.svg"
+import Simbolo from "@/assets/symbol.svg"
 
 export function ProjectCard() {
 

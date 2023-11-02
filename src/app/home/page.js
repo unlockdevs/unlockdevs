@@ -4,11 +4,11 @@ import { Container } from "@/components/container";
 import { ProjectCard } from "@/components/projectCard";
 import { AdminCard } from "@/components/adminCard";
 import { SectionTitle } from "@/components/sectionTitle";
-import { ArrowToDown, Line, LittleText, RedSpan, Title } from "@/components/layout";
+import { ArrowToDown, Line, RedSpan, Title } from "@/components/layout";
 
 // Images
 import Image from "next/image";
-import Simbolo from "@/assets/simbolo.svg"
+import Simbolo from "@/assets/symbol.svg"
 import ArrowRight from "@/assets/arrow-right.svg"
 import CharIlustration from "@/assets/characters-illustration.svg"
 
