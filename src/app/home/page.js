@@ -4,7 +4,7 @@ import { Container } from "@/components/container";
 import { ProjectCard } from "@/components/projectCard";
 import { AdminCard } from "@/components/adminCard";
 import { SectionTitle } from "@/components/sectionTitle";
-import { ArrowToDown, Line, RedSpan, Title } from "@/components/layout";
+import { ArrowToDown, Line, LittleText, RedSpan, Title } from "@/components/layout";
 
 // Images
 import Image from "next/image";
@@ -20,7 +20,7 @@ import { Footer } from "@/components/footer";
 
 export default function Home() {
     return (
-        <main className="w-full min-h-screen bg-night">
+        <main className="w-full min-h-screen overflow-x-hidden bg-night">
             <Header />
 
             <Container className="gap-20 mt-12 text-white_light">
@@ -83,14 +83,14 @@ export default function Home() {
             </Container>
 
             <Container className="flex flex-col">
-                <SectionTitle>
+                <SectionTitle id="nosso-time">
                     <Title>Administradores</Title>
                 </SectionTitle>
 
                 <section className="flex flex-wrap max-w-[105rem] gap-24 justify-center px-20">
                     <AdminCard
                         name="João Carlos"
-                        skill="Desenvolvedor Web | Designer"
+                        skill="Desenvolvedor Web"
                         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                         image="https://i.pinimg.com/564x/73/92/36/739236f2a40f2e98c8ea3bc6be86a56a.jpg"
                     />
@@ -118,31 +118,31 @@ export default function Home() {
 
 
                 <section className="flex flex-wrap justify-center max-w-[70rem] gap-14 text-white_light text-5xl font-bold">
-                    <div className="flex items-center gap-4 cursor-pointer hover:text-pink-700 transition-colors">
+                    <div className="flex group items-center gap-4 cursor-pointer hover:text-red_imperial transition-colors">
                         <FaInstagram size={100} />
                         <div>
                             <h2>@unlockdevs</h2>
-                            <p className="text-red_imperial text-xl font-normal">
+                            <p className="text-red_imperial text-xl font-normal group-hover:text-white_light transition-colors">
                                 clique para acessar nosso intagram
                             </p>
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-4 cursor-pointer hover:text-orange-500 transition-colors">
+                    <div className="flex group items-center gap-4 cursor-pointer hover:text-red_imperial transition-colors">
                         <HiOutlineMail size={100} />
                         <div>
                             <h2>Nosso e-mail</h2>
-                            <p className="text-red_imperial text-xl font-normal">
+                            <p className="text-red_imperial text-xl font-normal group-hover:text-white_light transition-colors">
                                 clique para copiar nosso e-mail
                             </p>
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-4 cursor-pointer hover:text-green-500 transition-colors">
+                    <div className="flex group items-center gap-4 cursor-pointer hover:text-red_imperial transition-colors">
                         <FaWhatsapp size={100} />
                         <div>
                             <h2>Fale conosco</h2>
-                            <p className="text-red_imperial text-xl font-normal">
+                            <p className="text-red_imperial text-xl font-normal group-hover:text-white_light transition-colors">
                                 clique para falar pelo WhatsApp
                             </p>
                         </div>

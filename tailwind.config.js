@@ -13,6 +13,8 @@ module.exports = {
         "white_light": "#FDFFFE",
         "night": "#0E0C0F",
         "eerie_black": "#19181A",
+        "wenge": "#645D67",
+        "gray_light": "#CECECE",
       }
     },
   },

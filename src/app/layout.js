@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Unlock Devs',
+  title: 'Unlock Devs - v0.1',
   description: 'Desbloqueando o poder da tecnologia com cada linha de código.',
 }
 
